@@ -1,32 +1,24 @@
 'use strict';
 
-import {validarNota, validarCant} from "./validaciones.js";
+import {obtCantNotas, obtNota, calPromNots} from "./procedimientos.js";
 
-// Metodo para obtener el calculo del promedio
+// Funcion principal para calcular el promedio
 const calcularPromedio = () => {
-    let cantNotas;
-    do {
-        cantNotas = prompt("Introduzca la cantidad de notas:");
-        if(cantNotas === null){
-            return; // El usuario cancela la operación
-        }
-    } while (!validarCant(cantNotas));
+    const cantidadNotas = obtCantNotas();
+    if(cantidadNotas === null)
+    return;
 
-    cantNotas = parseInt(cantNotas);
-    let acumuladorNotas = 0;
+    const notas = [];
 
-    for(let i = 0; i < cantNotas; i ++){
-        let nota;
-        do { 
-            nota = prompt(`Introduza la nota ${i + 1}:`); // Esta interpolando
-            if(nota === null){
-                return; // El usuario cancela la operacion
-            }
-        } while (!validarNota(nota));
-        acumuladorNotas += parseFloat(nota);
+    for(let i = 0; i < cantidadNotas; i ++){
+        const nota = obtNota(i);
+        if(nota === null)
+        return;
+        notas.push(nota);
     }
-    const promedio = acumuladorNotas / cantNotas;
-    alert("El promedio es: " + promedio.toFixed(1));
+
+    const promedio = calPromNots(notas);
+    alert("El promedio " + promedio.toFixed(1));
 };
 
 export {

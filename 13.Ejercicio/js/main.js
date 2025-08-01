@@ -6,6 +6,7 @@ import {promedio} from "./promedio.js";
 function notasPromedio(){
     promedio();
 }
+window.notasPromedio = notasPromedio;
 
 // Mediante la propiedad
 const btnPropiedad = document.getElementById('btn3Promedio');
