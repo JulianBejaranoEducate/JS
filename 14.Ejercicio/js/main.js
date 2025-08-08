@@ -35,7 +35,7 @@ btnOK.addEventListener('click', () => {
 btnPromedio.onclick = function(){
     let arrayInpunt = document.querySelectorAll('#nota');
     let promedio = 0;
-    // Tambien se puede con el .map
+    // Tambien se puede con el metodo .map
     arrayInpunt.forEach(e => {
         if(parseFloat(e.value)){
             promedio += parseFloat(e.value);        

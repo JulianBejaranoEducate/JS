@@ -19,6 +19,7 @@ const calcularPromedio = () => {
 
     const promedio = calPromNots(notas);
     alert("El promedio " + promedio.toFixed(1));
+    console.log("El promedio " + promedio.toFixed(1));
 };
 
 export {

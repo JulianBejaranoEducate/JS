@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.h1{
+    text-align: center;
+}
+
 .content {
     margin: 10px;
     padding: 20px;
@@ -11,19 +15,32 @@
 }
 
 .box1{
+    margin: left; /* margi: auto, solo funciona cuando width esta definido*/
     width: 150px;
-    height: 80px;
+    height: auto;
     padding: 5px;
+    background-color: darkslategray;
+    /* box-sizing: border-box; */
 }
 
 .box2{
+    margin: auto;
     width: 150px;
-    height: 80px;
+    height: auto;
     padding: 5px;
+    background-color: darkslategray;
 }
 
 .box3{
-    width: 100px;
-    height: 80px;
+    margin: right;
+    width: 150px;
+    height: auto;
     padding: 5px;
+    background-color: darkslategray;
+}
+
+.footer{
+    padding: 5px;
+    margin: auto;
+    width: 650px;
 }

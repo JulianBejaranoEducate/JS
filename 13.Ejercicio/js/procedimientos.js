@@ -5,7 +5,7 @@ import { validarCant, validarNota } from "./validaciones.js";
 const obtenterCantNotas = () => {
     let cantNotas;
     do {
-        cantNotas = prompt("Ingresa la cantidad de notas;");
+        cantNotas = prompt("Ingresa la cantidad de notas");
         if(cantNotas === null)
         return null;
     } while (!validarCant(cantNotas));
